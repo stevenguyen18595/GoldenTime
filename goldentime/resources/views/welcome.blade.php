@@ -29,6 +29,10 @@
                 height: 100vh;
                 margin: 0;
             }
+            body{
+              background-image: url("images/background.jpg");
+              background-repeat: no-repeat;
+            }
 
             .full-height {
                 height: 100vh;
@@ -72,16 +76,9 @@
                 margin-bottom: 30px;
             }
             .img-h-w{
-              height: 50% !important;
-              width: 20%;
-              padding: 0px;
-              margin: 0px;
-
-            }
-            .logo2{
               padding: 0px;
               margin:0px;
-              height:80%;
+              height:20%;
               width:30%;
             }
         </style>
@@ -92,7 +89,7 @@
             <div class="container is-fluid">
               <div class="navbar-brand">
                 <a class="navbar-item" href="{{ url('') }}">
-                  <img src="{{ asset('images/logo1.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
+                  <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                   <span></span>
@@ -155,11 +152,7 @@
         </div>
 
             <div class="content">
-                <img src="{{ asset('images/logo2.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
-                <div class="">
-                    <img src="{{ asset('images/logo1.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo2">
-                </div>
-
+                <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
                 <div class="links">
                   <!--we put the game here -->
                 </div>

@@ -117,8 +117,8 @@
 
 
 
-                    <button class="button is-primary is-outlined is-fullwidth m-t-30"> Register </button>
-                    <a class="button is-info is-small is-outlined m-t-10" href="{{ route('login') }}"> Already have an account? </a>
+                    <button class="button is-dark is-outlined is-fullwidth m-t-30"> Register </button>
+                    <a class="button is-danger is-small is-outlined m-t-10" href="{{ route('login') }}"> Already have an account? </a>
                 </form>
 
 

@@ -40,8 +40,7 @@
             <button class="button is-dark is-outlined is-fullwidth m-t-30"> Login </button>
             <a class="button is-danger is-small is-outlined m-t-10" href="{{ route('password.request') }}"> Forgot Your Password? </a>
           </form>
-
-
+          <img src="{{asset('images/background.jpg')}}" alt="">
         </div>
       </div>
     </div>

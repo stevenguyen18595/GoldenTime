@@ -1,0 +1,6 @@
+html{
+  background-image: url("/images/background.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: repeat;
+}

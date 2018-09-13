@@ -18,7 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/myhelper.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -26,7 +28,7 @@
             <div class="container is-fluid">
               <div class="navbar-brand">
                 <a class="navbar-item" href="{{ url('') }}">
-                  <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+                    <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                   <span></span>
@@ -71,7 +73,7 @@
                       </a>
                     </p>
                     <p class="control">
-                      <a class="button is-primary" href="{{ url('/logout') }}">
+                      <a class="button is-outlined" href="{{ url('/logout') }}">
                         <span>
                           <i class="fas fa-sign-out-alt"></i>
                         </span>

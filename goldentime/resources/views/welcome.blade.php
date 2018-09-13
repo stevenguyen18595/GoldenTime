@@ -71,6 +71,19 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .img-h-w{
+              height: 50% !important;
+              width: 20%;
+              padding: 0px;
+              margin: 0px;
+
+            }
+            .logo2{
+              padding: 0px;
+              margin:0px;
+              height:80%;
+              width:30%;
+            }
         </style>
     </head>
     <body>
@@ -79,7 +92,7 @@
             <div class="container is-fluid">
               <div class="navbar-brand">
                 <a class="navbar-item" href="{{ url('') }}">
-                  <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+                  <img src="{{ asset('images/logo1.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                   <span></span>
@@ -93,12 +106,12 @@
                 <div class="navbar-item">
                   <div class="field is-grouped">
                     <p class="control">
-                      <a href="#" class="button is-primary" data-toggle="dropdown" role="button" aria-expanded="false">
-                          {{ Auth::user()->first_name }} <span class="caret"></span>
+                      <a href="#" class="button is-outlined" data-toggle="dropdown" role="button" aria-expanded="false">
+                          {{ Auth::user()->first_name }} {{Auth::user()->last_name}} <span class="caret"></span>
                       </a>
                     </p>
                     <p class="control">
-                      <a class="button is-primary" href="{{ url('/logout') }}">
+                      <a class="button is-outlined" href="{{ url('/logout') }}">
                         <span>
                           <i class="fas fa-sign-out-alt"></i>
                         </span>
@@ -115,7 +128,7 @@
                   <div class="navbar-item">
                     <div class="field is-grouped">
                       <p class="control">
-                        <a class="button is-primary" href="{{route('login')}}"> <!--this is login button -->
+                        <a class="button is-outlined" href="{{route('login')}}"> <!--this is login button -->
                           <span class="icon">
                             <i class="fas fa-sign-in-alt"></i>
                           </span>
@@ -125,7 +138,7 @@
                         </a>
                       </p>
                       <p class="control">
-                        <a class="button is-primary" href="{{route('register')}}">
+                        <a class="button is-outlined" href="{{route('register')}}">
                           <span class="icon">
                             <i class="fas fa-user-plus"></i>
                           </span>
@@ -139,22 +152,19 @@
 
             @endif
           </nav>
+        </div>
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <img src="{{ asset('images/logo2.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
+                <div class="">
+                    <img src="{{ asset('images/logo1.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo2">
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                  <!--we put the game here -->
                 </div>
             </div>
-        </div>
+
       </div>
     </body>
 </html>

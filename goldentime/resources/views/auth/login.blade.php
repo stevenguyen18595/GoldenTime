@@ -37,8 +37,8 @@
             </div>
 
             <b-checkbox name="remember" class="m-t-20"> Remember me </b-checkbox>
-            <button class="button is-primary is-outlined is-fullwidth m-t-30"> Login </button>
-            <a class="button is-info is-small is-outlined m-t-10" href="{{ route('password.request') }}"> Forgot Your Password? </a>
+            <button class="button is-dark is-outlined is-fullwidth m-t-30"> Login </button>
+            <a class="button is-danger is-small is-outlined m-t-10" href="{{ route('password.request') }}"> Forgot Your Password? </a>
           </form>
 
 

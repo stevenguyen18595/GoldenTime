@@ -41,7 +41,7 @@
                 <div class="navbar-item">
                   <div class="field is-grouped">
                     <p class="control">
-                      <a class="button is-primary" href="{{route('login')}}"> <!--this is login button -->
+                      <a class="button is-outlined" href="{{route('login')}}"> <!--this is login button -->
                         <span class="icon">
                           <i class="fas fa-sign-in-alt"></i>
                         </span>
@@ -51,7 +51,7 @@
                       </a>
                     </p>
                     <p class="control">
-                      <a class="button is-primary" href="{{route('register')}}">
+                      <a class="button is-outlined" href="{{route('register')}}">
                         <span class="icon">
                           <i class="fas fa-user-plus"></i>
                         </span>
@@ -66,7 +66,7 @@
                 <div class="navbar-item">
                   <div class="field is-grouped">
                     <p class="control">
-                      <a href="#" class="button is-primary" data-toggle="dropdown" role="button" aria-expanded="false">
+                      <a href="#" class="button is-outlined" data-toggle="dropdown" role="button" aria-expanded="false">
                           {{ Auth::user()->first_name}} {{Auth::user()->last_name}} <span class="caret"></span>
                       </a>
                     </p>

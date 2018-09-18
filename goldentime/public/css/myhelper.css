@@ -4,3 +4,127 @@ html{
   background-size: 100%;
   background-repeat: repeat;
 }
+
+#timeline{
+  position: relative;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 10px;
+  width: auto;
+  opacity: 1.0 !important
+  z-index:50 !important;
+}
+
+.timeline-circle{
+  position: absolute;
+  width: 0px !important;
+  height: 0px;
+  border: 8px solid #fff;
+  border-radius: 50px;
+  top:-19px;
+  margin-left: -3px !important;
+  z-index: 3;
+}
+
+.aus-timeline{
+  background-color: grey;
+  position: absolute;
+  width: 20px !important;
+  height: 20px;
+  top: -30px;
+  border-radius: 50px;
+  margin-left: -6px !important;
+  z-index: 50;
+}
+
+#timeline label{
+  position: absolute;
+  margin-top: 25px;
+  text-align: center;
+  color: black;
+  font-size: 0.8em;
+}
+#timeline span{
+  height:0.7cm;
+  width: 0.3cm;
+  margin-top: -5px;
+}
+#timeline span:hover{
+  background-color:black;
+}
+
+.img-setup {
+  border:solid 10px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  height:100%;
+  width:200%;
+
+}
+
+.frame {
+  background-color:#e6e6e6;
+  border:solid 5px #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:8vh 5vh;
+  height:30vh;
+  width:40vh;
+  padding:3vmin;
+  position:relative;
+  text-align:center;
+  &:before {
+    border-radius:2px;
+    bottom:-1vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-1vmin;
+    position:absolute;
+    right:-1vmin;
+    top:-1vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-1vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-1vmin;
+    position:absolute;
+    right:-1vmin;
+    top:-1vmin;
+  }
+}
+.txt-box {
+	background-color: #f2f2f2;
+	border-top: 3px dotted #000;
+	border-bottom: 3px dotted #000;
+	box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  margin-top: 50px;
+	margin-bottom: 1px;
+  height: 50px;
+  width: 350px;
+  text-align: center;
+  text-decoration-style: solid;
+  font-size: 1.20vw;
+}
+.scroll-btn{
+  border: dashed 1px;
+  border-color: grey;
+  margin-bottom: 4vh;
+  z-index: 99;
+}
+.scroll-btn:hover{
+  background-color: grey;
+}
+
+label{
+  font-weight: bold;
+}

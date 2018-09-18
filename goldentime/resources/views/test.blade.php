@@ -89,66 +89,17 @@
 
     </head>
     <body>
+        <script>
+          $( function() {
+            $( "#timeline" ).slider();
+          });
+        </script>
         <div>
-          <nav class="navbar is-transparent is-light">
-            <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item" href="{{ url('') }}">
-                  <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo">
-                </a>
-              </div>
-            @if (Route::has('login'))
-              @auth
-                <div class="navbar-item navbar-end">
-                  <div class="field is-grouped">
-                    <p class="control">
-                      <a href="#" class="button is-outlined" data-toggle="dropdown" role="button" aria-expanded="false">
-                          {{ Auth::user()->first_name }} {{Auth::user()->last_name}} <span class="caret"></span>
-                      </a>
-                    </p>
-                    <p class="control">
-                      <a class="button is-outlined" href="{{ url('/logout') }}">
-                        <span>
-                          <i class="fas fa-sign-out-alt"></i>
-                        </span>
-                        <span>
-                          Logout
-                        </span>
-                      </a>
-                    </p>
-                  </div>
+                <div id="timeline" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                    <span class="ui-slider-handle ui-corner-all ui-state-default">
+                    </span>
                 </div>
 
-              @else
-
-                  <div class="navbar-item navbar-end">
-                    <div class="field is-grouped">
-                      <p class="control">
-                        <a class="button is-outlined" href="{{route('login')}}"> <!--this is login button -->
-                          <span class="icon">
-                            <i class="fas fa-sign-in-alt"></i>
-                          </span>
-                          <span>
-                            Login
-                          </span>
-                        </a>
-                      </p>
-                      <p class="control">
-                        <a class="button is-outlined" href="{{route('register')}}">
-                          <span class="icon">
-                            <i class="fas fa-user-plus"></i>
-                          </span>
-                          <span>Sign up</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-
-              @endauth
-
-            @endif
-            </div>
-          </nav>
 
 
             <div class="content">

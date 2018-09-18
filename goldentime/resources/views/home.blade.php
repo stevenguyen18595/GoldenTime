@@ -49,5 +49,21 @@
         <i class="fas fa-chevron-up"></i>
       </span>
   </button>
+  <!-- here is where we put the audio player-->
+  <div class="columns">
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+      <audio controls>
+          <source src="sounds/AusNationalAnthem.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+  </div>
 </div>
 @endsection

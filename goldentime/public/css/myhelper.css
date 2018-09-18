@@ -128,3 +128,6 @@ html{
 label{
   font-weight: bold;
 }
+audio{
+  align-items: center;
+}

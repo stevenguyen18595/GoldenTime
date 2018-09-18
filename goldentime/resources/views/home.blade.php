@@ -49,6 +49,20 @@
         <i class="fas fa-chevron-up"></i>
       </span>
   </button>
+  <!-- the game button -->
+  <div class="columns">
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+      <a href="{{url('/game')}}" class="button is-large is-rounded is-light">Try pictionary game</a>
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+  </div>
   <!-- here is where we put the audio player-->
   <div class="columns">
     <div class="column">

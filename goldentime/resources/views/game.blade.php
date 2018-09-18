@@ -85,30 +85,30 @@
               height:20%;
               width:30%;
             }
+            p{
+              text-align: center;
+            }
+            a{
+              align-items: center;
+            }
         </style>
 
     </head>
     <body>
-        <script>
-          $( function() {
-            $( "#timeline" ).slider();
-          });
-        </script>
-        <div>
-                <div id="timeline" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                    <span class="ui-slider-handle ui-corner-all ui-state-default">
-                    </span>
-                </div>
-
-
-
-            <div class="content">
-                <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
-                <div class="links">
-                  <!--we put the game here -->
-                </div>
+        <p class="title">The Game Developing are in process</p>
+          <div class="columns">
+            <div class="column">
             </div>
+            <div class="column">
+            </div>
+            <div class="column">
+              <a href="{{url('/home')}}" class="button">Back to Home</a>
+            </div>
+            <div class="column">
+            </div>
+            <div class="column">
+            </div>
+          </div>
 
-      </div>
     </body>
 </html>

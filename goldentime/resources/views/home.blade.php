@@ -2,28 +2,25 @@
 
 @section('content')
 <div class="container">
-
-  <div id="timeline" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-    <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min">
+  <!-- this contain the infor of the slider -->
+  <div class="range-slider">
+    <div class="range">
+    <input type="range" min="1" max="7" steps="1" value="1">
     </div>
-    <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-    <label class="aus-timeline" style="left:0%"></label>
-    <label style="left:0%">1915</label>
-    <label class="aus-timeline" style="left:13%"></label>
-    <label style="left:13%">1916</label>
-    <label class="aus-timeline" style="left:26%"></label>
-    <label style="left:26%">1917</label>
-    <label class="aus-timeline" style="left:39%"></label>
-    <label style="left:39%">1918</label>
-    <label class="aus-timeline" style="left:52%"></label>
-    <label style="left:52%">1919</label>
-    <label class="aus-timeline" style="left:64%"></label>
-    <label style="left:64%">1920</label>
-    <label class="aus-timeline" style="left:76%"></label>
-    <label style="left:76%">1921</label>
-    <label class="aus-timeline" style="left:95%"></label>
-    <label style="left:95%">1922</label>
+    <ul class="range-labels">
+      <li class="active selected">1916</li>
+      <li>1917</li>
+      <li>1918</li>
+      <li>1919</li>
+      <li>1920</li>
+      <li>1921</li>
+      <li>1922</li>
+    </ul>
   </div>
+  <div class="level">
+
+  </div>
+
 
   <div class="columns">
     <div class="column">

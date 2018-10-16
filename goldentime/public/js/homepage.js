@@ -51,24 +51,49 @@ $(document).ready(function() {
     });
 
 });
+
+//-------------------------------------------------------------------------------------------------------
 //below is the funtion for slider
-function createColor(step) {
-    $(".ui-slider-range").css("background-color", grey);
+var sheet = document.createElement('style'),
+  $rangeInput = $('.range input'),
+  prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
+
+document.body.appendChild(sheet);
+
+var getTrackStyle = function (el) {
+  var curVal = el.value,
+      val = (curVal - 1) * 16.666666667,
+      style = '';
+
+  // Set active label
+  $('.range-labels li').removeClass('active selected');
+
+  var curLabel = $('.range-labels').find('li:nth-child(' + curVal + ')');
+
+  curLabel.addClass('active selected');
+  curLabel.prevAll().addClass('selected');
+
+  // Change background gradient
+  for (var i = 0; i < prefs.length; i++) {
+    style += '.range {background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #fff ' + val + '%, #fff 100%)}';
+    style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #595959 ' + val + '%, #595959 100%)}';
+  }
+
+  return style;
 }
-// do something with slider
-$(function() {
-    $("#timeline").slider({
-        disabled: false, // Can be true to disable
-        value: 10,
-        min: 0,
-        step: 100,
-        max: 100,
-        change: createColor,
-        slide: function(event, ui) {
-            createColor(ui.value);
-        }
-    });
+
+$rangeInput.on('input', function () {
+  sheet.textContent = getTrackStyle(this);
 });
+
+// Change input value on label click
+$('.range-labels li').on('click', function () {
+  var index = $(this).index();
+
+  $rangeInput.val(index + 1).trigger('input');
+
+});
+//------------------------------------------------------------------------------------------
 //function make scroll to top button
 window.onscroll = function() {
     scrollFunction()

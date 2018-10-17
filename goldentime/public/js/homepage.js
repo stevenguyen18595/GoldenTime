@@ -76,7 +76,7 @@ var getTrackStyle = function (el) {
 
   curLabel.addClass('active selected');
   curLabel.prevAll().addClass('selected');
-
+// get year from labels 
   filter_year = curLabel.text();
   iterateRecords();
 

@@ -5,16 +5,16 @@
   <!-- this contain the infor of the slider -->
   <div class="range-slider">
     <div class="range">
-    <input type="range" min="1" max="7" steps="1" value="1">
+    <input id="slider" type="range" min="1" max="7" steps="1" value="1">
     </div>
     <ul class="range-labels">
-      <li class="active selected">1916</li>
-      <li>1917</li>
-      <li>1918</li>
-      <li>1919</li>
-      <li>1920</li>
-      <li>1921</li>
+      <li class="active selected">1915</li>
+      <li>1916</li>
       <li>1922</li>
+      <li>1924</li>
+      <li>1925</li>
+      <li>1926</li>
+      <li>1929</li>
     </ul>
   </div>
   <div class="level">
@@ -41,7 +41,7 @@
   <div id="list">
   </div>
   <!--here is the scroll to top button -->
-  <button class="button is-large scroll-btn" type="button" name="button" onclick="topFunction()" title="Go To Top">
+  <button id="myBtn" class="button is-large scroll-btn" type="button" name="button" onclick="topFunction()" title="Go To Top">
       <span>
         <i class="fas fa-chevron-up"></i>
       </span>

@@ -1,13 +1,16 @@
+var filter_year;
+var records;
+
 function getYear(year) {
     if (year) {
-        return year.match(/[\d]{1}/); // This is regex (https://en.wikipedia.org/wiki/Regular_expression)
+        return year.match(/\d{4}/); // This is regex (https://en.wikipedia.org/wiki/Regular_expression)
     }
 }
 
-function iterateRecords(data) {
+function iterateRecords() {
     var temp_array = new Array();
-    console.log(data);
-    $.each(data.result.records, function(recordKey, recordValue) {
+    $("#list").html("");
+    $.each(records, function(recordKey, recordValue) {
 
         var recordTitle = recordValue["dc:title"];
         var recordYear = getYear(recordValue["dcterms:temporal"]);
@@ -15,19 +18,20 @@ function iterateRecords(data) {
         var recordDescription = recordValue["dc:subject"];
 
         // declare a variable to make a filter
-        var filter_title = "Australia (ship)";
-        if (recordTitle == filter_title && recordYear && recordImage && recordDescription) {
+        if (recordTitle && recordYear == filter_year && recordImage && recordDescription) {
             $("#list").append(
                 $('<div>').addClass("columns").append(
                     $('<div>').addClass("column"),
                     $('<div>').addClass("frame").append(
                         $('<img>').attr("src", recordImage).addClass("img-setup"),
+                        console.log(recordImage),
                     ),
                     $('<div>').addClass("column"),
                 )
             );
 
         }
+        return recordKey < 100; //we loop the record for less than 100 times and then break
     });
 
 
@@ -46,7 +50,7 @@ $(document).ready(function() {
         dataType: "jsonp", // We use "jsonp" to ensure AJAX works correctly locally (otherwise XSS).
         cache: true,
         success: function(data) {
-            iterateRecords(data);
+            records = data.result.records;
         }
     });
 
@@ -72,6 +76,9 @@ var getTrackStyle = function (el) {
 
   curLabel.addClass('active selected');
   curLabel.prevAll().addClass('selected');
+
+  filter_year = curLabel.text();
+  iterateRecords();
 
   // Change background gradient
   for (var i = 0; i < prefs.length; i++) {

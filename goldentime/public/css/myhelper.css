@@ -1,3 +1,4 @@
+/* css for website background*/
 html {
     background-image: url("/images/background.jpg");
     background-attachment: fixed;
@@ -10,7 +11,6 @@ html {
 }
 
 /* the css for the slider */
-
 .range {
     position: relative;
     width: 550px;
@@ -140,7 +140,6 @@ html {
 }
 
 /* the css for the picture frame */
-
 .img-setup {
     border: solid 10px;
     border-bottom-color: #ffe;
@@ -151,6 +150,7 @@ html {
     width: 200%;
 }
 
+/*css for frame of the image*/
 .frame {
     background-color: #e6e6e6;
     border: solid 5px #eee;
@@ -168,6 +168,7 @@ html {
     padding: 3vmin;
     position: relative;
     text-align: center;
+
     &:before {
         border-radius: 2px;
         bottom: -1vmin;
@@ -178,6 +179,7 @@ html {
         right: -1vmin;
         top: -1vmin;
     }
+
     &:after {
         border-radius: 2px;
         bottom: -1vmin;
@@ -188,6 +190,26 @@ html {
         right: -1vmin;
         top: -1vmin;
     }
+}
+
+/*hovering will enlarge images*/
+.img-setup:hover {
+    -ms-transform: scale(2.2);
+    /* IE 9 */
+    -webkit-transform: scale(2.2);
+    /* Safari 3-8 */
+    transform: scale(2.2);
+}
+
+/*text frame is used for the textbox under imgage's frame */
+.text-frame {
+    position: relative;
+    text-align: center;
+    border: 20px double #545454;
+    border-width: 20px;
+    border-style: double;
+    border-color: #545454;
+    background-color: white;
 }
 
 .txt-box {

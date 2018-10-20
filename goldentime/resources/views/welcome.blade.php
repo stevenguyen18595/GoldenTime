@@ -82,8 +82,8 @@
             .img-h-w{
               padding: 0px;
               margin:0px;
-              height:20%;
-              width:30%;
+              height:150px;
+              width:450px;
             }
         </style>
 
@@ -93,7 +93,7 @@
           <nav class="navbar is-transparent is-light">
             <div class="container">
               <div class="navbar-brand">
-                <a class="navbar-item" href="{{ url('') }}">
+                <a class="navbar-item" href="{{ url('/home') }}">
                   <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo">
                 </a>
               </div>

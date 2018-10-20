@@ -14,7 +14,7 @@ function iterateRecords() {
 
         var recordTitle = recordValue["dc:title"];
         var recordYear = getYear(recordValue["dcterms:temporal"]);
-        var recordImage = recordValue["150_pixel_jpg"];
+        var recordImage = recordValue["1000_pixel_jpg"];
         var recordDescription = recordValue["dc:subject"];
 
         // declare a variable to make a filter
@@ -24,7 +24,8 @@ function iterateRecords() {
                     $('<div>').addClass("column"),
                     $('<div>').addClass("frame").append(
                         $('<img>').attr("src", recordImage).addClass("img-setup"),
-                        console.log(recordImage),
+                        $('<p>').append(recordTitle).addClass("text-frame"),
+                        console.log(recordImage), //we use this to test images in the console
                     ),
                     $('<div>').addClass("column"),
                 )
@@ -59,45 +60,47 @@ $(document).ready(function() {
 //-------------------------------------------------------------------------------------------------------
 //below is the funtion for slider
 var sheet = document.createElement('style'),
-  $rangeInput = $('.range input'),
-  prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
+    $rangeInput = $('.range input'),
+    prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
 
 document.body.appendChild(sheet);
 
-var getTrackStyle = function (el) {
-  var curVal = el.value,
-      val = (curVal - 1) * 16.666666667,
-      style = '';
+var getTrackStyle = function(el) {
+    var curVal = el.value,
+        val = (curVal - 1) * 16.666666667,
+        style = '';
 
-  // Set active label
-  $('.range-labels li').removeClass('active selected');
+    // Set active label
+    $('.range-labels li').removeClass('active selected');
 
-  var curLabel = $('.range-labels').find('li:nth-child(' + curVal + ')');
+    var curLabel = $('.range-labels').find('li:nth-child(' + curVal + ')');
 
-  curLabel.addClass('active selected');
-  curLabel.prevAll().addClass('selected');
-// get year from labels 
-  filter_year = curLabel.text();
-  iterateRecords();
+    curLabel.addClass('active selected');
+    curLabel.prevAll().addClass('selected');
+    // get year from labels
+    filter_year = curLabel.text();
 
-  // Change background gradient
-  for (var i = 0; i < prefs.length; i++) {
-    style += '.range {background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #fff ' + val + '%, #fff 100%)}';
-    style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #595959 ' + val + '%, #595959 100%)}';
-  }
+    iterateRecords();
 
-  return style;
+
+    // Change background gradient
+    for (var i = 0; i < prefs.length; i++) {
+        style += '.range {background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #fff ' + val + '%, #fff 100%)}';
+        style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #595959 0%, #595959 ' + val + '%, #595959 ' + val + '%, #595959 100%)}';
+    }
+
+    return style;
 }
 
-$rangeInput.on('input', function () {
-  sheet.textContent = getTrackStyle(this);
+$rangeInput.on('input', function() {
+    sheet.textContent = getTrackStyle(this);
 });
 
 // Change input value on label click
-$('.range-labels li').on('click', function () {
-  var index = $(this).index();
+$('.range-labels li').on('click', function() {
+    var index = $(this).index();
 
-  $rangeInput.val(index + 1).trigger('input');
+    $rangeInput.val(index + 1).trigger('input');
 
 });
 //------------------------------------------------------------------------------------------

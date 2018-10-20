@@ -29,7 +29,7 @@
     </div>
     <div class="column">
       <div class="txt-box">
-        Australia ship 1916
+        Queensland's History from 1915
       </div>
     </div>
     <div class="column">

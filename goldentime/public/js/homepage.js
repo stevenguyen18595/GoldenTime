@@ -1,6 +1,48 @@
 var filter_year;
 var records;
+// this function is used for the game
+function check()
+{
+	//getting input from question 1
+  var myselect1=document.getElementById("test1");
+  var index1=myselect.selectedIndex ;
+  var value1 = myselect.options[index].value;
+  //getting input from question 2
+  var myselect2=document.getElementById("test2");
+  var index2=myselect2.selectedIndex ;
+  var value2 = myselect2.options[index].value;
+  //getting input from question 3
+  var myselect3 = document.getElementById("test3");
+  var index3 = myselect3.selectedIndex;
+  var value3 = myselect3.options[index].value;
+  //getting input from question 4
+  var myselect4 = document.getElementById("test4");
+  var index4 = myselect4.selectedIndex;
+  var value4 = myselect4.options[index].value;
+  // compare the in put the correct answer
+  if(value == 2016){
+	alert("great, it is year " + value);
+  }else{
+	alert("no, it is year 2016");
+  }
+}
+//function check-result
+function ResultCheck(value1,value2,value3,value4){
+  var ans1 = 1916;
+  var ans2 = 1915;
+  var ans3 = 1922;
+  var ans4 = 1925;
+  if(value1 == ans1 && value2 == ans2 && value3 == ans3 && value4 == ans4){
+    $("#showModal").click(function() {
+  $(".modal").addClass("is-active");
+    });
 
+    $(".modal-close").click(function() {
+       $(".modal").removeClass("is-active");
+    });
+  }
+}
+//=================================================================================================================================================
 function getYear(year) {
     if (year) {
         return year.match(/\d{4}/); // This is regex (https://en.wikipedia.org/wiki/Regular_expression)

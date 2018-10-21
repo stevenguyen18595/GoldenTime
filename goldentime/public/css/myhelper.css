@@ -1,4 +1,5 @@
 /* css for website background*/
+
 html {
     background-image: url("/images/background.jpg");
     background-attachment: fixed;
@@ -11,6 +12,7 @@ html {
 }
 
 /* the css for the slider */
+
 .range {
     position: relative;
     width: 550px;
@@ -140,6 +142,7 @@ html {
 }
 
 /* the css for the picture frame */
+
 .img-setup {
     border: solid 10px;
     border-bottom-color: #ffe;
@@ -151,6 +154,7 @@ html {
 }
 
 /*css for frame of the image*/
+
 .frame {
     background-color: #e6e6e6;
     border: solid 5px #eee;
@@ -163,12 +167,11 @@ html {
     box-sizing: border-box;
     display: inline-block;
     margin: 8vh 5vh;
-    height: 30vh;
-    width: 40vh;
+    height: 45vh;
+    width: 60vh;
     padding: 3vmin;
     position: relative;
     text-align: center;
-
     &:before {
         border-radius: 2px;
         bottom: -1vmin;
@@ -179,7 +182,6 @@ html {
         right: -1vmin;
         top: -1vmin;
     }
-
     &:after {
         border-radius: 2px;
         bottom: -1vmin;
@@ -193,15 +195,17 @@ html {
 }
 
 /*hovering will enlarge images*/
+
 .img-setup:hover {
-    -ms-transform: scale(2.2);
+    -ms-transform: scale(1.7);
     /* IE 9 */
-    -webkit-transform: scale(2.2);
+    -webkit-transform: scale(1.7);
     /* Safari 3-8 */
-    transform: scale(2.2);
+    transform: scale(1.7);
 }
 
 /*text frame is used for the textbox under imgage's frame */
+
 .text-frame {
     position: relative;
     text-align: center;
@@ -210,6 +214,7 @@ html {
     border-style: double;
     border-color: #545454;
     background-color: white;
+    bottom: 10px;
 }
 
 .txt-box {
@@ -220,10 +225,13 @@ html {
     margin-top: 50px;
     margin-bottom: 1px;
     height: 50px;
-    width: 350px;
+    width: 450px;
     text-align: center;
     text-decoration-style: solid;
     font-size: 1.20vw;
+    top: 50px;
+    bottom: -30px;
+    left: 50%;
 }
 
 .scroll-btn {
@@ -244,4 +252,14 @@ label {
 audio {
     align-items: center;
     margin-top: 4vh;
+}
+
+/*here is the css for game page*/
+
+.back-to-home {
+    position: relative;
+    text-align: center;
+    top: 30px;
+    bottom: 20px;
+    left: 25%;
 }

@@ -12,6 +12,7 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Scripts -->
+        <script src="{{asset('js/homepage.js')}}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="{{ asset('js/jquery-ui.js') }}" defer></script>
         <script src="{{ asset('js/jquery.js') }}" ></script>
@@ -92,23 +93,147 @@
               align-items: center;
             }
         </style>
+        <style type="text/css">
+          #apDiv1 {
+            position:relative;
+            top:20px;
+            bottom: 20px;
+            margin-bottom: 30px;
+            width:360px;
+            z-index:1;
+          }
+        </style>
 
     </head>
     <body>
-        <p class="title">The Game Developing are in process</p>
+        <p class="title">Memory Testing</p>
+          <!-- we leave the question here -->
           <div class="columns">
             <div class="column">
             </div>
             <div class="column">
             </div>
             <div class="column">
-              <a href="{{url('/home')}}" class="button">Back to Home</a>
+              <div class="txt-box">
+                Do you know the photo below is taken by which year?
+              </div>
             </div>
             <div class="column">
             </div>
             <div class="column">
             </div>
           </div>
+          <div class="columns">
+            <div class="column">
+            </div>
+            <div class="column">
+            </div>
+            <div class="column">
+              <!-- question 1   -->
+              <div id="apDiv1">
+                <form action="" method="get" name="form" onsubmit="return check();">
+                  <div class="frame ">
+                    <img  class="img-setup" border="0" src="/images/Blue_Bell_Hotel Gladstone_ca_1916.jpg" width="300" height="300">
+                    <p class="text-frame"> the Blue Bell Hotel , Gladstone</p>
+                    <div class="select is-dark">
+                      <select id="test1" class="is-dark is-outlined">
+                        <option value ="1915">year 1915</option>
+                        <option value ="1916">year 1916</option>
+                        <option value="1917">year 1917</option>
+                        <option value="1918">year 1918</option>
+                        <option value="1919">year 1919</option>
+                        <option value="1920">year 1920</option>
+                        <option value="1921">year 1921</option>
+                        <option value="1922">year 1922</option>
+                        <option value="1925">year 1925</option>
+                      </select>
+                    </div>
+                    <input class="button is-dark" type="submit" value="Submit" />
+                  </div>
+                </form>
+              </div>
+              <!--question 2  -->
+              <div id="apDiv2">
+                <form action="" method="get" name="form" onsubmit="return check();">
+                  <div class="frame ">
+                    <img  class="img-setup" border="0" src="/images/Enoggera_Army_Camp_ca_1915.jpg" width="300" height="300">
+                    <p class="text-frame">Enoggera Army Camp</p>
+                    <div class="select is-dark">
+                      <select id="test2" class="is-dark is-outlined">
+                        <option value ="1915">year 1915</option>
+                        <option value ="1916">year 1916</option>
+                        <option value="1917">year 1917</option>
+                        <option value="1918">year 1918</option>
+                        <option value="1919">year 1919</option>
+                        <option value="1920">year 1920</option>
+                        <option value="1921">year 1921</option>
+                        <option value="1922">year 1922</option>
+                        <option value="1925">year 1925</option>
+                      </select>
+                    </div>
+                    <input class="button is-dark" type="submit" value="Submit" />
+                  </div>
+                </form>
+              </div>
+              <!-- question 3 -->
+              <div id="apDiv3">
+                <form action="" method="get" name="form" onsubmit="return check();">
+                  <div class="frame ">
+                    <img  class="img-setup" border="0" src="/images/Anzac_Day_at_Manly_1922.jpg" width="300" height="300">
+                    <p class="text-frame">Anzac_Day_at_Manly</p>
+                    <div class="select is-dark">
+                      <select id="test3" class="is-dark is-outlined">
+                        <option value ="1915">year 1915</option>
+                        <option value ="1916">year 1916</option>
+                        <option value="1917">year 1917</option>
+                        <option value="1918">year 1918</option>
+                        <option value="1919">year 1919</option>
+                        <option value="1920">year 1920</option>
+                        <option value="1921">year 1921</option>
+                        <option value="1922">year 1922</option>
+                        <option value="1925">year 1925</option>
+                      </select>
+                    </div>
+                    <input class="button is-dark" type="submit" value="Submit" />
+                  </div>
+                </form>
+              </div>
+              <!-- question 4  -->
+              <div id="apDiv4">
+                <form action="" method="get" name="form" onsubmit="return check();">
+
+                  <div class="frame ">
+                    <img  class="img-setup" border="0" src="/images/Jim_Owens_Chevrolet_truck_off_the_road_in_the_Nambour_district_ca_1925.jpg" width="300" height="300">
+                    <p class="text-frame">truck off the road in Nambour district</p>
+                    <div class="select is-dark">
+                      <select id="test4" class="is-dark is-outlined">
+                        <option value ="1915">year 1915</option>
+                        <option value ="1916">year 1916</option>
+                        <option value="1917">year 1917</option>
+                        <option value="1918">year 1918</option>
+                        <option value="1919">year 1919</option>
+                        <option value="1920">year 1920</option>
+                        <option value="1921">year 1921</option>
+                        <option value="1922">year 1922</option>
+                        <option value="1925">year 1925</option>
+                      </select>
+                    </div>
+                    <input class="button is-dark" type="submit" value="Submit" />
+                  </div>
+                </form>
+              </div>
+              <a href="{{url('/home')}}" class="button back-to-home is-large is-light is-rounded">Back to Home</a>
+            </div>
+            <div class="column">
+            </div>
+            <div class="column">
+            </div>
+          </div>
+          <!-- we keeep the result popup of the game here-->
+          <div class="element">
+
+          </div>
+
 
     </body>
 </html>

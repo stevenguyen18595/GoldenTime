@@ -83,7 +83,7 @@
               padding: 0px;
               margin:0px;
               height:150px;
-              width:450px;
+              width:450px;;
             }
         </style>
 

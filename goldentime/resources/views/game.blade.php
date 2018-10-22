@@ -19,7 +19,7 @@
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,8 +29,8 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-family: 'Shadows Into Light', cursive;
+                font-weight: bold;
                 height: 100vh;
                 margin: 0;
             }
@@ -102,11 +102,14 @@
             width:360px;
             z-index:1;
           }
+          .title-1{
+            font-family: Shadows Into Light;
+          }
         </style>
 
     </head>
     <body>
-        <p class="title">Memory Testing</p>
+        <p class=" title title-1">Memory Testing</p>
           <!-- we leave the question here -->
           <div class="columns">
             <div class="column">
@@ -115,7 +118,7 @@
             </div>
             <div class="column">
               <div class="txt-box">
-                Do you know the photo below is taken by which year?
+                Which year have these photos been taken?
               </div>
             </div>
             <div class="column">

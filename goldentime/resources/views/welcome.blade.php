@@ -189,10 +189,10 @@
             <div class="column is-6">
               <div class="p-border">
                 <p class="landing-page-area">Welcome to Goldentime</p>
-                <p class="landing-page-area2">* This is a web-platform that is developed by team L which </br>
+                <p class="landing-page-area2">* This is a web-platform that is developed by team L which allow </br>
                   people to learn History of Queensland through timeline .</br>
-                  * You will be able to see what happened in the past through photos that were taken by local photographer at those times .</br>
-                  * After finishing a learining tour, a pictionary game will be given to you to test what have you learn so far.</br>
+                  * You will be able to see what happened in the past through photos that were taken by local photographers at those times .</br>
+                  * After finishing a learining tour, a pictionary game will be given to you to test what you have learned so far.</br>
                   * There are some traditional songs that will be played along with your study.</br>
                   * Finally, this is built mainly for high school students.
                 </p>

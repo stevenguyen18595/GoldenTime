@@ -67,9 +67,14 @@
     <div class="column">
     </div>
     <div class="column">
-      <audio controls>
-          <source src="sounds/AusNationalAnthem.mp3" type="audio/mpeg">
+      <audio controls autoplay tabindex="0">
+          <source src="sounds/the_strongest.mp3" type="audio/mpeg">
       </audio>
+      <ul id="playlist">
+        <li class="active"><a href="sounds/the_strongest.mp3">The strongest one</a></li>
+        <li><a href="sounds/prepare_for_battle.mp3">Prepare for battle</a></li>
+        <li><a href="sounds/Grant_Line.mp3">Grant_Line</a></li>
+      </ul>
     </div>
     <div class="column">
     </div>

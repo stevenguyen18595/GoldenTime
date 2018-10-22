@@ -46,6 +46,13 @@
             font-family: 'Shadows Into Light', cursive;
             font-weight: bold;
           }
+          audio{
+            width: 400px;
+          }
+          #playlist{background:#666;width:400px;padding:20px;}
+          .active a{color:#ffcc00;text-decoration:none;}
+          li a{color:#eeeedd;background:#333;padding:5px;display:block;}
+          li a:hover{text-decoration:none;color:#ffcc00}
         </style>
 
 </head>

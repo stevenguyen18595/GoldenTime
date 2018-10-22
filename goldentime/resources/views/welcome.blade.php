@@ -18,8 +18,8 @@
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{asset('css/jquery-ui.css')}}" rel="stylesheet">
@@ -28,16 +28,15 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-family: 'Shadows Into Light', cursive;
+                font-weight: bold;
                 height: 100vh;
                 margin: 0;
             }
             body{
-              background-image: url("images/background.jpg");
+              background-image: url("images/background-1.jpg");
               background-repeat: no-repeat;
             }
-
             .full-height {
                 height: 100vh;
             }
@@ -62,8 +61,12 @@
                 text-align: center;
             }
 
-            .title {
-                font-size: 84px;
+            .title{
+              font-family: 'Shadows Into Light', cursive;
+            }
+            .button-style{
+              font-family: 'Shadows Into Light', cursive;
+              font-weight: bold;
             }
 
             .links > a {
@@ -85,6 +88,36 @@
               height:150px;
               width:450px;;
             }
+
+        </style>
+        <style media="screen">
+          .logo{
+            height:63.8px;
+            width: 240px;
+          }
+          .p-border{
+            position: relative;
+            border-bottom: 1px solid white;
+            width: 102.5%;
+          }
+          .landing-page-area{
+            font-family: 'Charmonman', cursive;
+            color: white;
+            font-size: 45px;
+            margin-top: 5%;
+            margin-left:11%;
+            -webkit-filter: 100%; /* Safari 6.0 - 9.0 */
+            filter: 100%;
+          }
+          .landing-page-area2{
+            font-family: 'Charmonman', cursive;
+            font-size: 28px;
+            margin-left:11%;
+            margin-top: 12px;
+            color: white;
+            font-weight: 680;
+          }
+
         </style>
 
     </head>
@@ -149,15 +182,70 @@
             @endif
             </div>
           </nav>
-
-
-            <div class="content">
-                <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="img-h-w">
-                <div class="links">
-                  <!--we put the game here -->
-                </div>
+          <!-- here is the landing page section for marketing -->
+          <div class="columns">
+            <div class="column is-2 ">
             </div>
+            <div class="column is-6">
+              <div class="p-border">
+                <p class="landing-page-area">Welcome to Goldentime</p>
+                <p class="landing-page-area2">* This is a web-platform that is developed by team L which </br>
+                  people to learn History of Queensland through timeline .</br>
+                  * You will be able to see what happened in the past through photos that were taken by local photographer at those times .</br>
+                  * After finishing a learining tour, a pictionary game will be given to you to test what have you learn so far.</br>
+                  * There are some traditional songs that will be played along with your study.</br>
+                  * Finally, this is built mainly for high school students.
+                </p>
 
+              </div>
+            </div>
+            <div class="column  is-2 ">
+              <div class="card">
+                <div class="card-content">
+
+                  <h1 class="title"> Log In </h1>
+                  <hr>
+                  <form class="" action="{{ route('login') }}" method="post" role="form">
+                    {{ csrf_field() }}
+                    <div class="field">
+                      <label for="username" class="label"> Username </label>
+                      <p class="control has-icons-left">
+                        <input class="input {{ $errors->has('username')? 'is-danger' : '' }}" type="username" name='username' id='username' placeholder="username" value="{{ old('username') }}">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                      </p>
+                      @if ($errors->has('username'))
+                        <p class="help is-danger"> {{ $errors->first('username') }}</p>
+                      @endif
+                    </div>
+
+                    <div class="field">
+                      <label for="password" class="label"> Password </label>
+                      <p class="control has-icons-left">
+                        <input class="input {{ $errors->has('password')? 'is-danger' : '' }}" type="password" name="password" id='password' placeholder="Password">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-lock"></i>
+                        </span>
+                      </p>
+                      @if ($errors->has('password'))
+                        <p class="help is-danger"> {{ $errors->first('password') }}</p>
+                      @endif
+                    </div>
+
+                    <b-checkbox name="remember" class="m-t-20"> Remember me </b-checkbox>
+                    <button class="button is-dark is-outlined is-fullwidth m-t-30 button-style"> Login </button>
+                    <a class="button is-danger is-small is-outlined m-t-10 " href="{{ route('password.request') }}"> Forgot Your Password? </a>
+                    <a class="button is-dark is-small is-outlined m-t-10 " href="{{ route('register') }}"> Don't have an account </a>
+                  </form>
+                  <img src="{{asset('images/background.jpg')}}" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="column is-2">
+
+            </div>
+          </div>
       </div>
     </body>
 </html>

@@ -7,17 +7,17 @@
     <div class="range">
     <input id="slider" type="range" min="1" max="7" steps="1" value="1">
     </div>
-    <ul class="range-labels">
-      <li class="active selected">1915</li>
-      <li>1916</li>
-      <li>1922</li>
-      <li>1924</li>
-      <li>1925</li>
-      <li>1926</li>
-      <li>1929</li>
+    <ul class="range-labels ">
+      <li class="active selected label">1915</li>
+      <li class="label">1916</li>
+      <li class="label">1922</li>
+      <li class="label">1924</li>
+      <li class="label">1925</li>
+      <li class="label">1926</li>
+      <li class="label">1929</li>
     </ul>
   </div>
-  <div class="level">
+  <div class="section">
 
   </div>
 

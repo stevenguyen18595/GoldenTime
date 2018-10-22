@@ -224,7 +224,7 @@ html {
     width: 450px;
     text-align: center;
     text-decoration-style: solid;
-    font-size: 1.20vw;
+    font-size: 24px;
     top: 50px;
     bottom: -30px;
     left: 50%;
@@ -241,8 +241,9 @@ html {
     background-color: grey;
 }
 
-label {
+.label {
     font-weight: bold;
+    font-size: 25px !important;
 }
 
 audio {

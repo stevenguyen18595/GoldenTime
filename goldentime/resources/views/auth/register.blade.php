@@ -7,6 +7,7 @@
             <div class="card-content">
 
                 <h1 class="title"> Register </h1>
+                <hr>
 
                 <form class="" action="{{ route('register') }}" method="post" role="form">
 
@@ -117,7 +118,7 @@
 
 
 
-                    <button class="button is-dark is-outlined is-fullwidth m-t-30"> Register </button>
+                    <button class="button is-dark is-outlined is-fullwidth m-t-30 button-style"> Register </button>
                     <a class="button is-danger is-small is-outlined m-t-10" href="{{ route('login') }}"> Already have an account? </a>
                 </form>
 

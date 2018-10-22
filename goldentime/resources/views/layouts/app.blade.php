@@ -22,6 +22,31 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{asset('css/jquery-ui.css')}}" rel="stylesheet">
         <link href="{{asset('css/myhelper.css')}}" rel="stylesheet">
+        <style media="screen">
+          html, body {
+              background-color: #fff;
+              color: #636b6f;
+              font-family: 'Shadows Into Light', cursive;
+              font-weight: bold;
+              height: 100vh;
+              margin: 0;
+          }
+          body{
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+          }
+          .logo{
+            height:63.8px;
+            width: 240px;
+          }
+          .title{
+            font-family: 'Shadows Into Light', cursive;
+          }
+          .button-style{
+            font-family: 'Shadows Into Light', cursive;
+            font-weight: bold;
+          }
+        </style>
 
 </head>
 <body>

@@ -7,7 +7,7 @@
         <div class="card-content">
 
           <h1 class="title"> Log In </h1>
-
+          <hr>
           <form class="" action="{{ route('login') }}" method="post" role="form">
             {{ csrf_field() }}
             <div class="field">
@@ -37,7 +37,7 @@
             </div>
 
             <b-checkbox name="remember" class="m-t-20"> Remember me </b-checkbox>
-            <button class="button is-dark is-outlined is-fullwidth m-t-30"> Login </button>
+            <button class="button is-dark is-outlined is-fullwidth m-t-30 button-style"> Login </button>
             <a class="button is-danger is-small is-outlined m-t-10" href="{{ route('password.request') }}"> Forgot Your Password? </a>
           </form>
           <img src="{{asset('images/background.jpg')}}" alt="">

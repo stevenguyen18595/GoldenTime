@@ -88,9 +88,11 @@
             }
             p{
               text-align: center;
+              font-size: 22px;
             }
             a{
               align-items: center;
+              font-size: 22px;
             }
         </style>
         <style type="text/css">
@@ -104,6 +106,11 @@
           }
           .title-1{
             font-family: Shadows Into Light;
+          }
+          .result{
+            background-color: #d6d6c2;
+            color: red;
+
           }
         </style>
 
@@ -134,7 +141,7 @@
             <div class="column">
               <!-- question 1   -->
               <div id="apDiv1">
-                <form action="" method="get" name="form" onsubmit="return check();">
+                <form action="" method="get" name="form" >
                   <div class="frame ">
                     <img  class="img-setup" border="0" src="/images/Blue_Bell_Hotel Gladstone_ca_1916.jpg" width="300" height="300">
                     <p class="text-frame"> the Blue Bell Hotel , Gladstone</p>
@@ -151,13 +158,13 @@
                         <option value="1925">year 1925</option>
                       </select>
                     </div>
-                    <input class="button is-dark" type="submit" value="Submit" />
+                      <button type="button" name="button" class="button is-dark" onclick="check1()">Submit</button>  <p id="demo1" class="result"></p>
                   </div>
                 </form>
               </div>
               <!--question 2  -->
               <div id="apDiv2">
-                <form action="" method="get" name="form" onsubmit="return check();">
+                <form action="" method="get" name="form" >
                   <div class="frame ">
                     <img  class="img-setup" border="0" src="/images/Enoggera_Army_Camp_ca_1915.jpg" width="300" height="300">
                     <p class="text-frame">Enoggera Army Camp</p>
@@ -174,13 +181,13 @@
                         <option value="1925">year 1925</option>
                       </select>
                     </div>
-                    <input class="button is-dark" type="submit" value="Submit" />
+                    <button type="button" name="button" class="button is-dark" onclick="check2()">Submit</button>  <p id="demo2" class="result"></p>
                   </div>
                 </form>
               </div>
               <!-- question 3 -->
               <div id="apDiv3">
-                <form action="" method="get" name="form" onsubmit="return check();">
+                <form action="" method="get" name="form" >
                   <div class="frame ">
                     <img  class="img-setup" border="0" src="/images/Anzac_Day_at_Manly_1922.jpg" width="300" height="300">
                     <p class="text-frame">Anzac_Day_at_Manly</p>
@@ -197,13 +204,13 @@
                         <option value="1925">year 1925</option>
                       </select>
                     </div>
-                    <input class="button is-dark" type="submit" value="Submit" />
+                  <button type="button" name="button" class="button is-dark" onclick="check3()">Submit</button>  <p id="demo3" class="result"></p>
                   </div>
                 </form>
               </div>
               <!-- question 4  -->
               <div id="apDiv4">
-                <form action="" method="get" name="form" onsubmit="return check();">
+                <form action="" method="get" name="form">
 
                   <div class="frame ">
                     <img  class="img-setup" border="0" src="/images/Jim_Owens_Chevrolet_truck_off_the_road_in_the_Nambour_district_ca_1925.jpg" width="300" height="300">
@@ -221,7 +228,7 @@
                         <option value="1925">year 1925</option>
                       </select>
                     </div>
-                    <input class="button is-dark" type="submit" value="Submit" />
+                    <button type="button" name="button" class="button is-dark" onclick="check4()">Submit</button>  <p id="demo4" class="result"></p>
                   </div>
                 </form>
               </div>

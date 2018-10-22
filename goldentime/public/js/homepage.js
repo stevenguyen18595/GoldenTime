@@ -1,47 +1,70 @@
 var filter_year;
 var records;
-// this function is used for the game
-function check()
-{
-	//getting input from question 1
-  var myselect1=document.getElementById("test1");
-  var index1=myselect.selectedIndex ;
-  var value1 = myselect.options[index].value;
-  //getting input from question 2
-  var myselect2=document.getElementById("test2");
-  var index2=myselect2.selectedIndex ;
-  var value2 = myselect2.options[index].value;
-  //getting input from question 3
-  var myselect3 = document.getElementById("test3");
-  var index3 = myselect3.selectedIndex;
-  var value3 = myselect3.options[index].value;
-  //getting input from question 4
-  var myselect4 = document.getElementById("test4");
-  var index4 = myselect4.selectedIndex;
-  var value4 = myselect4.options[index].value;
-  // compare the in put the correct answer
-  if(value == 2016){
-	alert("great, it is year " + value);
-  }else{
-	alert("no, it is year 2016");
-  }
+// these functions is used for the game
+function check1() {
+    var ans1 = 1916;
+    var text;
+    //getting input from question 1
+    var myselect1 = document.getElementById("test1");
+    var index1 = myselect1.selectedIndex;
+    var value1 = myselect1.options[index1].value;
+    // compare the in put the correct answer
+    if (value1 == ans1) {
+        text = "correct answer"
+    } else {
+        text = "your answer is not correct "
+    }
+    document.getElementById("demo1").innerHTML = text;
 }
-//function check-result
-function ResultCheck(value1,value2,value3,value4){
-  var ans1 = 1916;
-  var ans2 = 1915;
-  var ans3 = 1922;
-  var ans4 = 1925;
-  if(value1 == ans1 && value2 == ans2 && value3 == ans3 && value4 == ans4){
-    $("#showModal").click(function() {
-  $(".modal").addClass("is-active");
-    });
+// this function is used for question 2
+function check2() {
+    var ans2 = 1915;
+    //getting input from question 2
+    var myselect2 = document.getElementById("test2");
+    var index2 = myselect2.selectedIndex;
+    var value2 = myselect2.options[index2].value;
+    // compare the in put the correct answer
+    if (value2 == ans2) {
+        text = "correct answer"
+    } else {
+        text = "your answer is not correct "
+    }
+    document.getElementById("demo2").innerHTML = text;
 
-    $(".modal-close").click(function() {
-       $(".modal").removeClass("is-active");
-    });
-  }
 }
+// this function is used for question 3
+function check3() {
+    var ans3 = 1922;
+    //getting input from question 3
+    var myselect3 = document.getElementById("test3");
+    var index3 = myselect3.selectedIndex;
+    var value3 = myselect3.options[index3].value;
+    // compare the in put the correct answer
+    if (value3 == ans3) {
+        text = "correct answer"
+    } else {
+        text = "your answer is not correct "
+    }
+    document.getElementById("demo3").innerHTML = text;
+}
+//this function is used for question 4
+function check4() {
+    var ans4 = 1925;
+    //getting input from question 4
+    var myselect4 = document.getElementById("test4");
+    var index4 = myselect4.selectedIndex;
+    var value4 = myselect4.options[index4].value;
+    // compare the in put the correct answer
+    if (value4 == ans4) {
+        text = "correct answer"
+    } else {
+        text = "your answer is not correct "
+    }
+    document.getElementById("demo4").innerHTML = text;
+}
+//function implement validator
+
+
 //=================================================================================================================================================
 function getYear(year) {
     if (year) {

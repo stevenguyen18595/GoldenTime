@@ -162,7 +162,7 @@
             <div id="navbarExampleTransparentExample" class="navbar-menu">
               <div class="navbar-end">
                 <a class="navbar-item" href="{{url('/home')}}">LESSON</a>
-                <a class="navbar-item" href="{{url('/game')}}">PICTIONARY-GAME</a>
+                <a class="navbar-item is-active" href="{{url('/game')}}">PICTIONARY-GAME</a>
                 <a class="navbar-item" href="#">MY_GRADES</a>
               </div>
 
@@ -251,13 +251,8 @@
                       <select id="test1" class="is-dark is-outlined">
                         <option value ="1915">year 1915</option>
                         <option value ="1916">year 1916</option>
-                        <option value="1917">year 1917</option>
-                        <option value="1918">year 1918</option>
-                        <option value="1919">year 1919</option>
-                        <option value="1920">year 1920</option>
-                        <option value="1921">year 1921</option>
-                        <option value="1922">year 1922</option>
-                        <option value="1925">year 1925</option>
+                        <option value ="1917">year 1917</option>
+                        <option value ="1925">year 1925</option>
                       </select>
                     </div>
                       <button type="button" name="button" class="button is-dark" onclick="check1()">Submit</button>  <p id="demo1" class="result"></p>
@@ -270,17 +265,12 @@
                   <div class="frame ">
                     <img  class="img-setup" border="0" src="/images/Enoggera_Army_Camp_ca_1915.jpg" width="300" height="300">
                     <p class="text-frame">Enoggera Army Camp</p>
-                    <div class="select is-dark">
-                      <select id="test2" class="is-dark is-outlined">
+                    <div class="select is-dark " >
+                      <select id="test2" class="is-dark is-outlined ">
                         <option value ="1915">year 1915</option>
                         <option value ="1916">year 1916</option>
-                        <option value="1917">year 1917</option>
-                        <option value="1918">year 1918</option>
-                        <option value="1919">year 1919</option>
-                        <option value="1920">year 1920</option>
-                        <option value="1921">year 1921</option>
-                        <option value="1922">year 1922</option>
-                        <option value="1925">year 1925</option>
+                        <option value ="1917">year 1917</option>
+                        <option value ="1918">year 1918</option>
                       </select>
                     </div>
                     <button type="button" name="button" class="button is-dark" onclick="check2()">Submit</button>  <p id="demo2" class="result"></p>
@@ -294,16 +284,11 @@
                     <img  class="img-setup" border="0" src="/images/Anzac_Day_at_Manly_1922.jpg" width="300" height="300">
                     <p class="text-frame">Anzac_Day_at_Manly</p>
                     <div class="select is-dark">
-                      <select id="test3" class="is-dark is-outlined">
+                      <select id="test3" class="is-dark is-outlined" >
                         <option value ="1915">year 1915</option>
                         <option value ="1916">year 1916</option>
-                        <option value="1917">year 1917</option>
-                        <option value="1918">year 1918</option>
-                        <option value="1919">year 1919</option>
-                        <option value="1920">year 1920</option>
-                        <option value="1921">year 1921</option>
-                        <option value="1922">year 1922</option>
-                        <option value="1925">year 1925</option>
+                        <option value ="1922">year 1922</option>
+                        <option value ="1925">year 1925</option>
                       </select>
                     </div>
                   <button type="button" name="button" class="button is-dark" onclick="check3()">Submit</button>  <p id="demo3" class="result"></p>
@@ -318,23 +303,20 @@
                     <img  class="img-setup" border="0" src="/images/Jim_Owens_Chevrolet_truck_off_the_road_in_the_Nambour_district_ca_1925.jpg" width="300" height="300">
                     <p class="text-frame">truck off the road in Nambour district</p>
                     <div class="select is-dark">
-                      <select id="test4" class="is-dark is-outlined">
+                      <select id="test4" class="is-dark is-outlined" >
                         <option value ="1915">year 1915</option>
                         <option value ="1916">year 1916</option>
-                        <option value="1917">year 1917</option>
-                        <option value="1918">year 1918</option>
-                        <option value="1919">year 1919</option>
-                        <option value="1920">year 1920</option>
-                        <option value="1921">year 1921</option>
-                        <option value="1922">year 1922</option>
-                        <option value="1925">year 1925</option>
+                        <option value ="1917">year 1917</option>
+                        <option value ="1925">year 1925</option>
                       </select>
                     </div>
                     <button type="button" name="button" class="button is-dark" onclick="check4()">Submit</button>  <p id="demo4" class="result"></p>
                   </div>
                 </form>
               </div>
-              <a href="{{url('/home')}}" class="button back-to-home is-large is-light is-rounded">Back to Home</a>
+
+                <a href="{{url('/home')}}" class="button back-to-home is-large is-rounded is-dark" >Back to Home</a>
+
             </div>
             <div class="column">
             </div>

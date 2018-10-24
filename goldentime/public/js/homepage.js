@@ -202,6 +202,7 @@ function init() {
     len = tracks.length - 1;
     audio[0].volume = 1;
     audio[0].play();
+    // audio will be played after user click
     playlist.find('a').click(function(e) {
         e.preventDefault();
         link = $(this);

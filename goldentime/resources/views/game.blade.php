@@ -38,7 +38,17 @@
               background-image: url("images/background.jpg");
               background-repeat: no-repeat;
             }
-
+            .logo{
+              height:63.8px;
+              width: 240px;
+            }
+            .title{
+              font-family: 'Shadows Into Light', cursive;
+            }
+            .button-style{
+              font-family: 'Shadows Into Light', cursive;
+              font-weight: bold;
+            }
             .full-height {
                 height: 100vh;
             }
@@ -67,15 +77,7 @@
                 font-size: 84px;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -90,12 +92,10 @@
               text-align: center;
               font-size: 22px;
             }
-            a{
-              align-items: center;
-              font-size: 22px;
-            }
+
         </style>
         <style type="text/css">
+
           #apDiv1 {
             position:relative;
             top:20px;
@@ -112,10 +112,112 @@
             color: red;
 
           }
+          .logo{
+            height:63.8px;
+            width: 240px;
+          }
         </style>
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+              // Add a click event on each of them
+              $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+
+                  // Get the target from the "data-target" attribute
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+
+                  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                  el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+
+                });
+              });
+            }
+
+          });
+        </script>
 
     </head>
     <body>
+      <nav class="navbar " role="navigation" aria-label="main navigation">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="{{ url('') }}">
+                  <img src="{{ asset('images/logo.png') }}" alt="Bulma: a modern CSS framework based on Flexbox" class="logo">
+              </a>
+              <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <!-- Here is where we put the navigation buttons -->
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item" href="{{url('/home')}}">LESSON</a>
+                <a class="navbar-item" href="{{url('/game')}}">PICTIONARY-GAME</a>
+                <a class="navbar-item" href="#">MY_GRADES</a>
+              </div>
+
+            </div>
+            <!-- Authentication Links -->
+            @guest
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <a class="button is-outlined" href="{{route('login')}}"> <!--this is login button -->
+                      <span class="icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                      </span>
+                      <span>
+                        Login
+                      </span>
+                    </a>
+                  </p>
+                  <p class="control">
+                    <a class="button is-outlined" href="{{route('register')}}">
+                      <span class="icon">
+                        <i class="fas fa-user-plus"></i>
+                      </span>
+                      <span>Sign up</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            @else
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <a href="#" class="button is-outlined" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ Auth::user()->first_name}} {{Auth::user()->last_name}} <span class="caret"></span>
+                    </a>
+                  </p>
+                  <p class="control">
+                    <a class="button is-outlined" href="{{ url('/logout') }}">
+                      <span>
+                        <i class="fas fa-sign-out-alt"></i>
+                      </span>
+                      <span>
+                        Logout
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            @endguest
+          </div>
+      </nav>
         <p class=" title title-1">Memory Testing</p>
           <!-- we leave the question here -->
           <div class="columns">
